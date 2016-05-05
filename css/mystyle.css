@@ -1,0 +1,14 @@
+label.error{
+    color: #F00;
+}
+
+input.error,
+select.error,
+textarea.error {
+    border:  1px green solid;
+}
+img{
+    float: left;
+    margin-top: 3px;
+    padding: 5px;
+}

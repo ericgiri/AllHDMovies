@@ -1,0 +1,119 @@
+<!--
+Mobile web development 
+Template for General purpose html5 page with JQuery Mobile
+Created by: Bhawani Giri
+email:      bgiri@conestogac.on.ca
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="UTF-8">
+        <title>AllHdMovies.Net</title>
+        <!--jQuery mobile style-->
+        <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.css">
+        <!--our styles-->
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <!--jQuery-->
+        <script src="js/lib/jquery-2.1.4.js"></script>
+        <!--jQuery Mobile-->
+        <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+        <!--jQuery validator-->
+        <script src="js/lib/jquery.validate.js"></script>
+        <!--My JS Files-->
+        <script src="js/global.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/SIUD.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/validation.js"></script>
+    </head>
+    <body>
+        <div id="HOMEPAGE" data-role="page">
+            <header data-role="header" data-position="fixed" data-theme="a">
+                <h1>ALlHdMovies.Net</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#HOMEPAGE" class="ui-link-inherit" id="pageHome">TV SHOWS</a></li>
+                        <li><a href="#COMEDYPAGE" class="ui-link-inherit" id="browseCarMenu">COMEDY</a></li>
+                        <li><a href="#FACEBOOKPAGE" class="ui-link-inherit">FACEBOOK</a></li>
+                        <li><a href="#ADDPAGE" class="ui-link-inherit" id="homeAdminMenu">ADD VIDEOS</a></li>
+                    </ul>
+                </div>
+            </header>
+        <section data-role="content">
+            <!-- Video List -->
+            <ul id="videoList" data-role="listview" class="ui-listview-inset">
+            </ul>
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h2>&copy; All HD Movies Inc.</h2>
+        </footer>
+        </div>
+        <!--homepage ends-->
+
+        <div id="ADDPAGE" data-role="page">
+            <header data-role="header" data-position="fixed" data-theme="a">
+                <h1>ALlHdMovies.Net</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#HOMEPAGE" class="ui-link-inherit">TV SHOWS</a></li>
+                        <li><a href="#COMEDYPAGE" class="ui-link-inherit">COMEDY</a></li>
+                        <li><a href="#FACEBOOKPAGE" class="ui-link-inherit">FACEBOOK</a></li>
+                        <li><a href="#ADDPAGE" class="ui-link-inherit">ADD VIDEOS</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <form id="videoForm" name="videoForm" data-ajax="true">
+                    <label for="videoTitle">Title</label>
+                    <input type="text" id="videoTitle" name="videoTitle" required/>
+                    <label for="videoID">ID</label>
+                    <input type="text" id="videoID" name="videoID" required/>
+                    <label for="videoLabel">Label</label>
+                    <input type="text" id="videoLabel" name="videoLabel" required/>
+                    <label for="videoType">Type</label>
+                    <select id="videoType">
+                        <option value="Youtube">Youtube</option>
+                        <option value="Facebook">Facebook</option>
+                    </select>
+                    <label for="dateAdded">Date</label>
+                    <input type="date" id="dateAdded" name="dateAdded"/>
+                    <label for="videoDescription">Description</label>
+                    <input type="text" id="videoDescription" name="videoDescription"/>
+                    <a href="" data-role="button" class="ui-btn-active" id="btnSubmit" name="btnSubmit" data-inline="true">Publish</a>
+                </form>
+
+            </section>
+            <footer data-role="footer" data-position="fixed">
+                <h2>&copy; All HD Movies Inc.</h2>
+            </footer>
+        </div>
+        <!--homepage ends-->
+
+        <!--Post Page Begins-->
+        <div id="VideoPage" data-role="page">
+            <header data-role="header" data-position="fixed" data-theme="a">
+                <h1>ALlHdMovies.Net</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#HOMEPAGE" class="ui-link-inherit">TV SHOWS</a></li>
+                        <li><a href="#COMEDYPAGE" class="ui-link-inherit">COMEDY</a></li>
+                        <li><a href="#FACEBOOKPAGE" class="ui-link-inherit">FACEBOOK</a></li>
+                        <li><a href="#ADDPAGE" class="ui-link-inherit">ADD VIDEOS</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <div id="videoDetail">
+                </div>
+                <button id="btnDelete" style="background: brown; color: #fff;">Delete Video</button>
+                <button id="btnUpdate" style="background: #191970; color: #fff;">Update Video</button>
+            </section>
+            <footer data-role="footer" data-theme="a" data-position="fixed">
+                <h1>&copy; All HD Movies Inc.</h1>
+            </footer>
+        </div>
+        <!--Post Page Ends-->
+    </body>
+</html>
