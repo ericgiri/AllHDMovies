@@ -66,9 +66,10 @@ email:      bgiri@conestogac.on.ca
             </header>
             <section data-role="content">
                 <form id="videoForm" name="videoForm" data-ajax="true">
-                    <label for="videoTitle">Title</label>
+                    <input type="hidden" value="publish" id="publishOrUpdate"/>
+                    <label for="videoTitle">Video Title</label>
                     <input type="text" id="videoTitle" name="videoTitle" required/>
-                    <label for="videoID">ID</label>
+                    <label for="videoID">VIDEO ID</label>
                     <input type="text" id="videoID" name="videoID" required/>
                     <label for="videoLabel">Label</label>
                     <input type="text" id="videoLabel" name="videoLabel" required/>
@@ -107,8 +108,10 @@ email:      bgiri@conestogac.on.ca
             <section data-role="content">
                 <div id="videoDetail">
                 </div>
-                <button id="btnDelete" style="background: brown; color: #fff;">Delete Video</button>
-                <button id="btnUpdate" style="background: #191970; color: #fff;">Update Video</button>
+                <form id="adminForm" name="id" data-ajax="true">
+                    <button id="btnDelete" style="background: brown; color: #fff;">Delete Video</button>
+                    <button id="btnUpdate" style="background: #191970; color: #fff;">Update Video</button>
+                </form>
             </section>
             <footer data-role="footer" data-theme="a" data-position="fixed">
                 <h1>&copy; All HD Movies Inc.</h1>

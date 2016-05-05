@@ -30,6 +30,12 @@ function btnSubmit_click() {
         addVideo();
 }
 
+function btnUpdate_click() {
+    updateVideo();
+    $("#publishOrUpdate").val("update");
+    $(location).prop('href', '#ADDPAGE')
+}
+
 function btnDelete_click() {
     DeleteVideo();
 }
@@ -38,6 +44,7 @@ function init() {
     $("#btnSubmit").on("click", btnSubmit_click);
     $("#videoList").on("click", videoDetail_show);
     $("#btnDelete").on("click", btnDelete_click);
+    $("#btnUpdate").on("click", btnUpdate_click);
     setCurrentDate();
 }
 

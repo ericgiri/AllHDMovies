@@ -22,7 +22,7 @@ var Videos = {
 
         function txFunction(tx) {
             console.info("Selecting all records");
-            var sql = "SELECT * FROM videos;";
+            var sql = "SELECT * FROM videos ORDER BY ID DESC;";
             tx.executeSql(sql, options, callBack, errorHandler);
         }
 
@@ -36,6 +36,24 @@ var Videos = {
         }
         db.transaction(txFunction, errorHandler, successTransaction);
     },
+
+    Update: function (options) {
+        function txFunction(tx) {
+            console.info("Updating Video...");
+            var sql = "UPDATE videos " +
+                "SET videoID=?, videoTitle=?, videoLabel=?, dateAdded=?, videoType=?,videoDescription=?" +
+                "WHERE ID=?;";
+
+            function successUpdate() {
+                console.info("Success; Update successful");
+                alert("Record updated successfully");
+            }
+
+            tx.executeSql(sql, options, successUpdate, errorHandler);
+        }
+        db.transaction(txFunction, errorHandler, successTransaction);
+    },
+
     Delete: function (options) {
 
         function successDelete() {
